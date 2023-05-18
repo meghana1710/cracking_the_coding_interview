@@ -1,0 +1,17 @@
+s = "    john kim    "
+print(len(s))
+first,last = 0,len(s)-1
+while(first<last):
+    if(s[first] == " "):
+        first+= 1 
+    if(s[last] == " "):
+        last -= 1 
+    if(s[first]!= " " and s[last]!=" "):
+        break
+s = s[first:last+1]
+rep= "%20"
+for i in s:
+    print(i)
+    if i == " ":
+        s = s.replace(i,rep)
+print(s)
